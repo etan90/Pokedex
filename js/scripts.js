@@ -18,7 +18,7 @@ let pokemonList = [
 
 //prints out Pokemon's name and height
 for (let i = 0; i < pokemonList.length; i++) {
-  if (pokemonList.height === 3.7) {
+  if (pokemonList.height > 3.0) {
     document.write(pokemonList[i].name + ' ' + '(height: ' + pokemonList[i].height + ') --> This is big! | ');
   } else {
     document.write(pokemonList[i].name + ' ' + '(height: ' + pokemonList[i].height + ') | ');
