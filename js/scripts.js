@@ -21,14 +21,22 @@ let pokemonRepository = (function () {
   pokemonList.forEach((pokemon) => pokemon.height > 3 ?
   document.write('<p>' + pokemon.name + ' ' + '(height: ' + pokemon.height + ') = This is big! </p>'):
   document.write('<p>' + pokemon.name + ' ' + '(height: ' + pokemon.height + ') </p>'))
-  
-  return {
-    add: function(pokemon) {
+
+  function add(pokemon) {
+    if (typeof pokemon === 'object' && 'name' in pokemon) {
       pokemonList.push(pokemon);
-    },
-    getAll: function() {
-      return pokemonList;
+    } else {
+      console.log(`Pokemon is not valid!`);
     }
+  };
+
+  function getAll() {
+    return pokemonList;
+  };
+
+  return {
+    add: add,
+    getAll: getAll,
   };
 })();
 
