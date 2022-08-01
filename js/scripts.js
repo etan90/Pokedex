@@ -1,5 +1,5 @@
 let pokemonRepository = (function () {
-  let pokemonList = [
+  let repository = [
     {
       name: 'Charmander',
       height: 2,
@@ -29,7 +29,6 @@ let pokemonRepository = (function () {
       console.log("pokemon is not correct");
     }
   }
-
   function getAll() {
     return repository;
   }
