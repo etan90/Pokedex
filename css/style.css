@@ -71,9 +71,9 @@ body {
   width: auto;
 }
 
-/* #modal-container {
+#modal-container {
   display: none;
-} */
+} 
 
 #modal-container.is-visible {
   display:block;
